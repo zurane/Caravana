@@ -10,7 +10,7 @@ export default function Navbar (){
         </div>
             <div className="links">
               <Link to="/About">About</Link>
-              <Link to="/">Home</Link>
+              <Link to="/Vans">Caravans</Link>
         </div>
     </nav>
     )
