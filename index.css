@@ -1,0 +1,159 @@
+* {
+    
+    box-sizing: border-box;
+}
+
+
+html, body {
+    
+    margin:0;
+    padding: 0;
+    
+}
+
+
+.navigation-bar > .links a  {
+    text-decoration: none;
+    padding: 15px;
+    color: #4D4D4D;
+    text-align: right;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22.923px;
+}
+
+.navigation-bar {
+    display: flex;
+    padding: 10.001px 25.819px 10.623px 26px;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 235.213px; */
+
+}
+
+.navigation-bar > .logo a {   
+    color: #000;
+    font-family: Inter;
+    font-size: 25.353px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 40.271px;
+    text-decoration: none;
+}
+
+.navigation-bar > .logo {
+    display: flex;
+    width: 144.513px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header {
+    height: 386.696px;
+    flex-shrink: 0;
+    background-image: url(./assets/images/image-53.png);
+    background-size: cover;
+    background-position: center;
+
+    padding: 30px;
+
+}
+
+header h1 {
+    
+    color: #FFF;
+    font-family: Inter;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 42px;
+}
+
+header p {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+
+.find-van-btn {
+    width: 100%;
+    border-radius: 5px;
+    background: #FF8C38;
+    text-align: center;
+    height: 49.832px;
+    flex-shrink: 0;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.find-van-btn a {
+    text-decoration: none;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight:500;
+}
+
+
+
+.main h2 {
+    color: #161616;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38px;
+}
+
+.main {
+    padding: 15px;
+    margin: 15px;
+}
+
+
+.about-header {
+    background-image: url(./assets/images/image-55.png);
+    width: 548.; height: 233.213px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about-banner {
+    
+    border-radius: 5px;
+    background: #FFCC8D;
+    padding: 40px;
+}
+.about-banner h3 {
+    
+    color: #161616;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+}
+.about-banner a {
+    
+    background: black;
+    color: #FFF;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #252525;
+    color: white
+}
+
