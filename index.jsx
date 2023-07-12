@@ -7,6 +7,8 @@ import Navbar from "./pages/Navbar";
 import Footer from "./pages/Footer";
 import Vans from "./pages/Vans";
 
+import "./server"
+
 function App() {
   return (
     <BrowserRouter>
