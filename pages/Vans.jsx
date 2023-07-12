@@ -3,7 +3,7 @@ import { ReactDOM } from "react";
 
 export default function () {
   React.useEffect(() => {
-    fetch("/api/van")
+    fetch("/api/vans")
       .then((res) => res.json())
       .then((data) => console.log(data));
   });
