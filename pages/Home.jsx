@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-// import vans from "./pages/Vans";
+import Vans from "./pages/Vans";
 
 export default function Home(){
   return (
