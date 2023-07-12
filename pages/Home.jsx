@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Vans from "./pages/Vans";
+
 
 export default function Home(){
   return (
@@ -13,7 +13,7 @@ export default function Home(){
               Add adventure to your life by joining the #vanlife movement. Rent the perfect van to make your perfect road trip.
           </p>
               <div className="find-van-btn">
-                  <Link to="/vans"  element={<Vans/>}>Find your van</Link>
+                  <Link>Find your van</Link>
               </div>
     </header>
     </>
