@@ -6,7 +6,10 @@ export default function Vans() {
   React.useEffect(() => {
     fetch("/api/vans")
       .then((res) => res.json())
-      .then((data) => setVans(data));
+      .then((data) => {
+        console.log(data); 
+        setVans(data);
+      });
   }, []);
 
   const caraVans = vans.map((van) => (
