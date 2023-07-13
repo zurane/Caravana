@@ -9,18 +9,17 @@ export default function () {
       .then((data) => setVans(data));
   }, []);
 
-  const caraVans = vans.map(van => (
-
+  const caraVans = vans.map((van) => (
     <section className="cards">
-    <div className="cards-row">
-      <div className="van-card" key={van.id}>
-        <img src={van.imageUrl} alt="caravan image" width="100"/>
-        <h3>{van.title}</h3>
-        <p>{van.price}</p>
-        <span>{van.type}</span>
+      <div className="cards-row">
+        <div className="van-card" key={van.id}>
+          <img src={van.imageUrl} alt="caravan image" width="100" />
+          <h3>{van.title}</h3>
+          <p>{van.price}</p>
+          <span>{van.type}</span>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
   ));
 
   return (
@@ -30,6 +29,7 @@ export default function () {
         <span>Simple</span>
         <span>Luxury</span>
         <span>Rugged</span>
+        {caraVans}
       </div>
     </>
   );
