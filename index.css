@@ -197,18 +197,18 @@ footer {
     justify-content: space-between;
     align-items: center;
     font-family: 'Roboto', sans-serif;
-    
+
 }
 
-.title-and-price > h4 {
+.title-and-price>h4 {
 
     font-size: 14px;
 
 }
 
-.title-and-price > p {
+.title-and-price>p {
 
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
 }
 
