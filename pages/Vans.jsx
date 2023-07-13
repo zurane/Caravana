@@ -16,7 +16,7 @@ export default function Vans() {
     <div className="cards" key={van.id}>
       <div className="cards-row">
         <div className="van-card">
-          <img src={van.imageUrl} alt="caravan image" width="100" />
+          <img src={van.imageUrl} alt="caravan image" width="100%" />
           <span className="title-price">
             <h3>{van.name}</h3>
             <p>{van.price}</p>
