@@ -8,7 +8,7 @@ export default function Vans() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        setVans(data);
+        setVans(data.vans);
       });
   }, []);
 
