@@ -199,6 +199,18 @@ footer {
     font-family: Helvetica, sans-serif;
 }
 
+.title-and-price > h4 {
+
+    font-size: 18px;
+
+}
+
+.title-and-price > p {
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
 .van-card>img {
 
     border-radius: 10px;
