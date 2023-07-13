@@ -163,6 +163,13 @@ footer {
 
 /* Vans page styles */
 
+
+.page-feed-section>h2 {
+
+    font-family: 'Clash Grotesk', sans-serif;
+
+}
+
 .tabs {
     display: inline-flex;
     align-items: center;
