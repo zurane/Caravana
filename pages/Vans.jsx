@@ -1,7 +1,7 @@
 import React from "react";
 import { ReactDOM } from "react";
 
-export default function () {
+export default function Vans () {
   const [vans, setVans] = React.useState([]);
   React.useEffect(() => {
     fetch("/api/vans")
