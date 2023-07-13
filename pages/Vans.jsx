@@ -17,9 +17,9 @@ export default function Vans() {
       <div className="cards-row">
         <div className="van-card">
           <img src={van.imageUrl} alt="caravan image" width="100%" />
-          <span className="title-price">
+          <span className="title-and-price">
             <h4>{van.name}</h4>
-            <p>{van.price}</p>
+            <p>R{van.price}/day</p>
           </span>
           <span className="type-badge">{van.type}</span>
         </div>

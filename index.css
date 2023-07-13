@@ -6,10 +6,9 @@
 
 html,
 body {
-
     margin: 0;
     padding: 0;
-
+    height: 100vh;
 }
 
 
@@ -168,7 +167,6 @@ footer {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-
     margin-bottom: 20px;
 }
 
@@ -181,13 +179,12 @@ footer {
 }
 
 .components {
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
 }
 
-.title-price {
+.title-and-price {
 
     display: flex;
     justify-content: space-between;
