@@ -196,7 +196,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: Helvetica, sans-serif;
 }
 
 .van-card>img {
