@@ -177,7 +177,7 @@ footer {
     background: #FFEAD0;
     padding: 6px 26px 7px 26px;
 
-    font-size: 15px;
+    font-size: 10px;
 }
 
 .components {
@@ -203,5 +203,5 @@ footer {
 .page-feed-section {
 
     margin: 10px;
-    padding: 15px;
+    padding: 10px;
 }
