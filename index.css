@@ -1,18 +1,19 @@
 * {
-    
+
     box-sizing: border-box;
 }
 
 
-html, body {
-    
-    margin:0;
+html,
+body {
+
+    margin: 0;
     padding: 0;
-    
+
 }
 
 
-.navigation-bar > .links a  {
+.navigation-bar>.links a {
     text-decoration: none;
     padding: 15px;
     color: #4D4D4D;
@@ -33,7 +34,7 @@ html, body {
 
 }
 
-.navigation-bar > .logo a {   
+.navigation-bar>.logo a {
     color: #000;
     font-family: Inter;
     font-size: 25.353px;
@@ -43,7 +44,7 @@ html, body {
     text-decoration: none;
 }
 
-.navigation-bar > .logo {
+.navigation-bar>.logo {
     display: flex;
     width: 144.513px;
     flex-direction: column;
@@ -62,7 +63,7 @@ header {
 }
 
 header h1 {
-    
+
     color: #FFF;
     font-family: Inter;
     font-size: 33px;
@@ -99,7 +100,7 @@ header p {
     font-family: Inter;
     font-size: 15px;
     font-style: normal;
-    font-weight:500;
+    font-weight: 500;
 }
 
 
@@ -121,19 +122,21 @@ header p {
 
 .about-header {
     background-image: url(./assets/images/image-55.png);
-    width: 548.; height: 233.213px;
+    width: 548.;
+    height: 233.213px;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .about-banner {
-    
+
     border-radius: 5px;
     background: #FFCC8D;
     padding: 40px;
 }
+
 .about-banner h3 {
-    
+
     color: #161616;
     font-family: Inter;
     font-size: 24px;
@@ -141,8 +144,9 @@ header p {
     font-weight: 700;
     line-height: 30px;
 }
+
 .about-banner a {
-    
+
     background: black;
     color: #FFF;
     padding: 15px;
@@ -155,5 +159,38 @@ footer {
     padding: 25px;
     background: #252525;
     color: white
+}
+
+
+/* Vans page styles */
+
+.tabs {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.title>span {
+
+    border-radius: 5px;
+    background: #FFEAD0;
+    width: 104px;
+    height: 37px;
+    padding: 6px 26px 7px 26px;
+}
+
+.cards-row {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.title-price {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
