@@ -1,8 +1,8 @@
 import React from "react";
-import { ReactDOM } from "react";
 
-export default function Vans () {
+export default function Vans() {
   const [vans, setVans] = React.useState([]);
+
   React.useEffect(() => {
     fetch("/api/vans")
       .then((res) => res.json())
@@ -10,9 +10,9 @@ export default function Vans () {
   }, []);
 
   const caraVans = vans.map((van) => (
-    <section className="cards">
+    <section className="cards" key={van.id}>
       <div className="cards-row">
-        <div className="van-card" key={van.id}>
+        <div className="van-card">
           <img src={van.imageUrl} alt="caravan image" width="100" />
           <h3>{van.title}</h3>
           <p>{van.price}</p>
