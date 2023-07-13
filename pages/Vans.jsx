@@ -30,7 +30,7 @@ export default function Vans() {
   return (
     <>
       <section className="page-feed-section">
-        <h1>Explore our caravan options</h1>
+        <h2>Explore our caravan options</h2>
         <div className="tabs">
           <span>Simple</span>
           <span>Luxury</span>
