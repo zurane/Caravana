@@ -168,14 +168,13 @@ footer {
     display: inline-flex;
     align-items: center;
     gap: 15px;
+
+    margin-bottom: 20px;
 }
 
 .tabs>span {
-
     border-radius: 5px;
     background: #FFEAD0;
-    width: 104px;
-    height: 37px;
     padding: 6px 26px 7px 26px;
 }
 
@@ -197,4 +196,10 @@ footer {
 
     border-radius: 10px;
 
+}
+
+.page-feed-section {
+
+    margin: 20px;
+    padding: 15px;
 }

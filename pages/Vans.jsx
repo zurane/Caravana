@@ -29,13 +29,16 @@ export default function Vans() {
 
   return (
     <>
+      <section className="page-feed-section">
       <h1>Explore our caravan options</h1>
       <div className="tabs">
         <span>Simple</span>
         <span>Luxury</span>
         <span>Rugged</span>
+        <span>Clear filters</span>
       </div>
       <div className="components">{caraVans}</div>
+      </section>
     </>
   );
 }
