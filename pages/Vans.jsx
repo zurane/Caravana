@@ -18,7 +18,7 @@ export default function Vans() {
         <div className="van-card">
           <img src={van.imageUrl} alt="caravan image" width="100%" />
           <span className="title-price">
-            <h3>{van.name}</h3>
+            <h4>{van.name}</h4>
             <p>{van.price}</p>
           </span>
           <span className="type-badge">{van.type}</span>
@@ -30,14 +30,13 @@ export default function Vans() {
   return (
     <>
       <section className="page-feed-section">
-      <h1>Explore our caravan options</h1>
-      <div className="tabs">
-        <span>Simple</span>
-        <span>Luxury</span>
-        <span>Rugged</span>
-        <span>Clear filters</span>
-      </div>
-      <div className="components">{caraVans}</div>
+        <h1>Explore our caravan options</h1>
+        <div className="tabs">
+          <span>Simple</span>
+          <span>Luxury</span>
+          <span>Rugged</span>
+        </div>
+        <div className="components">{caraVans}</div>
       </section>
     </>
   );
