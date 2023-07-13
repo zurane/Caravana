@@ -34,8 +34,8 @@ export default function Vans() {
         <span>Simple</span>
         <span>Luxury</span>
         <span>Rugged</span>
-        {caraVans}
       </div>
+      {caraVans}
     </>
   );
 }
