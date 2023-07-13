@@ -35,7 +35,7 @@ export default function Vans() {
         <span>Luxury</span>
         <span>Rugged</span>
       </div>
-      {caraVans}
+      <div className="components">{caraVans}</div>
     </>
   );
 }
