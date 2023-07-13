@@ -7,13 +7,13 @@ export default function Vans() {
     fetch("/api/vans")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data); 
+        console.log(data);
         setVans(data);
       });
   }, []);
 
   const caraVans = vans.map((van) => (
-    <section className="cards" key={van.id}>
+    <div className="cards" key={van.id}>
       <div className="cards-row">
         <div className="van-card">
           <img src={van.imageUrl} alt="caravan image" width="100" />
@@ -22,7 +22,7 @@ export default function Vans() {
           <span>{van.type}</span>
         </div>
       </div>
-    </section>
+    </div>
   ));
 
   return (
