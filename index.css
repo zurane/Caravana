@@ -232,7 +232,16 @@ footer {
 
 .van-overview>h4 {
 
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: 800;
+    font-family: "Roboto", sans-serif;
+
+}
+
+.van-overview>.price {
+
+    font-family: "Roboto", sans-serif;
+
 }
 
 .van-overview>p {
