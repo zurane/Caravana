@@ -19,7 +19,6 @@ export default function VanDetail() {
           <h4>{caravans.name}</h4>
           <span className="price">{caravans.price}</span>
           <p>{caravans.description}</p>
-          <Link>Rent this van</Link>
         </div>
       ) : (
         <h2>Loading...</h2>
