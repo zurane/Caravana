@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 export default function VanDetail() {
-  const params = useParams();
-  console.log(params);
+  const VanDetailPage = useParams();
+  useEffect(() => {
+    fetch(`/api/vans/${VanDetailPage}`).then((data) => {
+      console.log(data);
+    });
+  });
   return <h1>Van Detail page</h1>;
 }
