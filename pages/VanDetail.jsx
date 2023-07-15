@@ -15,7 +15,7 @@ export default function VanDetail() {
       {caravans ? (
         <div className="van-overview">
           <img src={caravans.imageUrl} alt="caravan-image" width="100%" />
-          <span className="van-type">{caravans.type}</span>
+          <span className="type-badge">{caravans.type}</span>
           <h4>{caravans.name}</h4>
           <span className="price">{caravans.price}</span>
           <p>{caravans.description}</p>
