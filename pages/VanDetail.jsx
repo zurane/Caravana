@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function VanDetail() {
   const [caravans, render] = React.useState(null);
@@ -19,6 +20,9 @@ export default function VanDetail() {
           <h4>{caravans.name}</h4>
           <span className="price">R{caravans.price}/day</span>
           <p>{caravans.description}</p>
+          <div className="find-van-btn">
+            <Link>Rent this van</Link>
+          </div>
         </div>
       ) : (
         <h2>Loading...</h2>
