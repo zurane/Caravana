@@ -8,5 +8,15 @@ export default function VanDetail() {
       .then((res) => res.json())
       .then((data) => console.log(data));
   }, [params.id]);
-  return <h1>Van Detail page</h1>;
+
+  const VanPageDetails = vans.map((details) => (
+    <>
+      <img src={details.imageUrl} alt="Caravan image" width="100%" />
+      <div>
+        <span className="type">{details.type}</span>
+      </div>
+    </>
+  ));
+
+  return <VanPageDetails />;
 }
