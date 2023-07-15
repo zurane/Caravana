@@ -221,9 +221,10 @@ footer {
     padding: 10px;
 }
 
-.van-overview>.type-badge {
+.van-overview.type-badge {
 
-    margin-top: 10px;
+    margin-top: 15px;
+    font-size: 14px;
 }
 
 .van-overview>img {
@@ -232,7 +233,7 @@ footer {
 
 .van-overview>h4 {
 
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 800;
     font-family: "Roboto", sans-serif;
 
