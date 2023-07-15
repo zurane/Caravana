@@ -2,25 +2,28 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 export default function VanDetail() {
-
-  const [caravans,render] = React.useState([]);
+  const [caravans, render] = React.useState(null);
   const params = useParams();
   React.useEffect(() => {
     fetch(`/api/vans/${params.id}`)
       .then((res) => res.json())
-      .then((data) => console.log(data),
-      render(data.caravans)
-      );
+      .then((data) => render(data.vans));
   }, [params.id]);
 
-  const VanPageDetails = caravans.map((details) => (
-    <>
-      <img src={details.imageUrl} alt="Caravan image" width="100%" />
-      <div>
-        <span className="type">{details.type}</span>
-      </div>
-    </>
-  ));
-
-  return <VanPageDetails />;
+  return (
+    <div className="caravan-overview-container">
+      {caravans ? (
+        <div className="van-overview">
+          <img src={caravans.imageUrl} alt="caravan-image" width="100%" />
+          <span className="van-type">{caravans.type}</span>
+          <h4>{caravans.name}</h4>
+          <span className="price">{caravans.price}</span>
+          <p>{caravans.description}</p>
+          <Link>Rent this van</Link>
+        </div>
+      ) : (
+        <h2>Loading...</h2>
+      )}
+    </div>
+  );
 }
