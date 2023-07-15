@@ -10,7 +10,6 @@ export default function Vans() {
     fetch("/api/vans")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setVans(data.vans);
       });
   }, []);
