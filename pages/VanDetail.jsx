@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 export default function VanDetail() {
   const VanDetailPage = useParams();
   useEffect(() => {
-    fetch(`/api/vans/${VanDetailPage}`).then((data) => {
+    fetch(`/api/vans/:${VanDetailPage}`).then((data) => {
       console.log(data);
     });
   });
