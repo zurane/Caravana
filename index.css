@@ -222,7 +222,16 @@ footer {
 }
 
 .van-overview>img {
-
     border-radius: 5px;
 }
 
+.van-overview>h4 {
+
+    font-size: 14px;
+}
+
+.van-overview>p {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+
+}
