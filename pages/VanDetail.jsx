@@ -9,7 +9,7 @@ export default function VanDetail() {
       .then((data) => console.log(data));
   }, [params.id]);
 
-  const VanPageDetails = vans.map((details) => (
+  const VanPageDetails = data.map((details) => (
     <>
       <img src={details.imageUrl} alt="Caravan image" width="100%" />
       <div>
