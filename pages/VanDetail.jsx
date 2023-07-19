@@ -3,9 +3,13 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 export default function VanDetail() {
+  // Always remember if your application is ever gonna have some kind of dynamic states,
+  // use the useState function to update the state of your UI or application.
   const [caravans, render] = React.useState(null);
   const params = useParams();
   React.useEffect(() => {
+    // A fetch request is a global function that uses GET method to fetch data from the server via API endpoint (Usually a URL)
+    // The Fetch method takes the API endpoint (url) as an argument
     fetch(`/api/vans/${params.id}`)
       .then((res) => res.json())
       .then((data) => render(data.vans));
