@@ -7,7 +7,7 @@ import About from "./pages/About";
 // import Navbar from "./pages/Navbar";
 import Vans from "./pages/Vans";
 import Detail from "./pages/VanDetail";
-import Layout from "./components/Layout";
+import Layout from "./components/layout";
 
 import "./server";
 
