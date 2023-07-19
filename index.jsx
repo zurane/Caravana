@@ -4,7 +4,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-// import Navbar from "./pages/Navbar";
+import Navbar from "./pages/Navbar";
 import Vans from "./pages/Vans";
 import Detail from "./pages/VanDetail";
 import Layout from "./components/layout";
