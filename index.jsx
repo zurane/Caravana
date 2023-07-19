@@ -4,10 +4,9 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Navbar from "./pages/Navbar";
 import Vans from "./pages/Vans";
 import Detail from "./pages/VanDetail";
-// import Layout from "./components/layout";
+import Layout from "./components/layout";
 
 import "./server";
 
@@ -19,7 +18,7 @@ function App() {
     // With Routes you can build Single Page Applications ( Such as dashboards, chat applications and learning platforms etc)
     <BrowserRouter>
       <Routes>
-        <Route element={<Navbar/>}>
+        <Route element={<Layout/>}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/vans" element={<Vans />} />
