@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Vans from "./pages/Vans";
 import Detail from "./pages/VanDetail";
-import Layout from "./components/layout";
+import Layout from "/components/Layout";
 
 import "./server";
 
