@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 // The Router package or module is a standalone and does not come with the React
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Vans from "./pages/Vans";
@@ -18,7 +18,7 @@ function App() {
     // With Routes you can build Single Page Applications ( Such as dashboards, chat applications and learning platforms etc)
     <BrowserRouter>
       <Routes>
-        <Route element={<Layout/>}>
+        <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/vans" element={<Vans />} />
