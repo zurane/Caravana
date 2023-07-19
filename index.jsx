@@ -20,7 +20,7 @@ function App() {
     // With Routes you can build Single Page Applications ( Such as dashboards, chat applications and learning platforms etc)
     <BrowserRouter>
       <Routes>
-        <Route element={<Layout />}>
+        <Route element={<Navbar />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/vans" element={<Vans />} />

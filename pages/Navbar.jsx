@@ -13,6 +13,7 @@ export default function Navbar (){
               <Link to="/About">About</Link>
               <Link to="/Vans">Caravans</Link>
         </div>
-    </nav>
+    </nav>,
+    <Outlet />
     )
 }
