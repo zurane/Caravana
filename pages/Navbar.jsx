@@ -12,6 +12,7 @@ export default function Navbar() {
         <div className="links">
           <Link to="/About">About</Link>
           <Link to="/Vans">Caravans</Link>
+          <Link to="/Host">Host</Link>
         </div>
       </nav>
       <Outlet />
