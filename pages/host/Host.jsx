@@ -1,9 +1,24 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Host(props) {
   return (
     <>
-      <h1>This is a host page.</h1>
+      <div className="dashboard__container">
+        <div className="dashboard__tabs">
+          <ul>
+            <li>
+              <Link>Dashboard</Link>
+            </li>
+            <li>
+              <Link>Income</Link>
+            </li>
+            <li>
+              <Link>Reviews</Link>
+            </li>
+          </ul>
+        </div>
+      </div>
     </>
   );
 }

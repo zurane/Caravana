@@ -10,9 +10,9 @@ export default function Navbar() {
           <Link to="/">#CARAVANA</Link>
         </div>
         <div className="links">
+          <Link to="/Host">Host</Link>
           <Link to="/About">About</Link>
           <Link to="/Vans">Caravans</Link>
-          <Link to="/Host">Host</Link>
         </div>
       </nav>
       <Outlet />
