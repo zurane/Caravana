@@ -1,7 +1,5 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
-
-export default function Income() {
+export default function Dashboard() {
   return (
     <>
       <h1>This is an Dashboard section</h1>
