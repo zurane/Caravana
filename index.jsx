@@ -11,8 +11,10 @@ import Host from "./pages/host/Host";
 import Dashboard from "./pages/host/Dashboard";
 import Income from "./pages/host/Income";
 import Reviews from "./pages/host/Reviews";
+import TheHostLayout from "./components/TheHostLayout";
 
 import "./server";
+import TheHostLayout from "./components/TheHostLayout";
 
 function App() {
   return (
@@ -27,7 +29,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/vans" element={<Vans />} />
           <Route path="vans/:id" element={<Detail />} />
-          <Route path="/host" element={<Dashboard />}>
+          <Route path="/host" element={<TheHostLayout />}>
             <Route path="host/income" element={<Income />} />
             <Route path="host/reviews" element={<Reviews />} />
           </Route>
