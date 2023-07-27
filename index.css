@@ -253,11 +253,10 @@ footer {
 
 /* Host page styles */
 
-.dashboard__tabs {
+.dashboard__tabs ul {
 
     display: flex;
     justify-content: center;
-    align-self: start;
 }
 
 .dashboard__tabs ul li {
