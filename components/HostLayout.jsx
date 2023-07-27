@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function TheHostLayout() {
+export default function HostLayout() {
   return (
     <>
       <div className="dashboard__container">
