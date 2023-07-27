@@ -11,10 +11,10 @@ import Host from "./pages/host/Host";
 import Dashboard from "./pages/host/Dashboard";
 import Income from "./pages/host/Income";
 import Reviews from "./pages/host/Reviews";
-import TheHostLayout from "./components/TheHostLayout";
+import TheHostLayout from "./pages/TheHostLayout";
 
 import "./server";
-import TheHostLayout from "./components/TheHostLayout";
+import TheHostLayout from "./pages/TheHostLayout";
 
 function App() {
   return (
