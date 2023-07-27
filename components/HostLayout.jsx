@@ -18,6 +18,7 @@ export default function HostLayout() {
           </ul>
         </div>
       </div>
+      <Outlet />
     </>
   );
 }
