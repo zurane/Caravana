@@ -255,7 +255,9 @@ footer {
 
 .dashboard__tabs {
 
-    display: inline-flex;
+    display: flex;
+    justify-content: center;
+    align-self: start;
 }
 
 .dashboard__tabs ul li {
