@@ -249,3 +249,22 @@ footer {
     font-family: "Roboto", sans-serif;
     font-size: 15px;
 }
+
+
+/* Host page styles */
+
+.dashboard__tabs {
+
+    display: inline-flex;
+}
+
+.dashboard__tabs ul li {
+
+    list-style: none;
+}
+
+.dashboard__tabs ul li a {
+
+    text-decoration: none;
+    color: #000;
+}
