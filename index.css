@@ -256,12 +256,12 @@ footer {
 .dashboard__tabs ul {
 
     display: flex;
-    justify-content: center;
 }
 
 .dashboard__tabs ul li {
 
     list-style: none;
+    padding: 15px;
 }
 
 .dashboard__tabs ul li a {
