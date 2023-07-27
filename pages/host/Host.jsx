@@ -1,20 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Host(props) {
+export default function Host() {
   return (
     <>
       <div className="dashboard__container">
         <div className="dashboard__tabs">
           <ul>
             <li>
-              <Link>Dashboard</Link>
+              <Link to="/">Dashboard</Link>
             </li>
             <li>
-              <Link>Income</Link>
+              <Link to="/">Income</Link>
             </li>
             <li>
-              <Link>Reviews</Link>
+              <Link to="/">Reviews</Link>
             </li>
           </ul>
         </div>
