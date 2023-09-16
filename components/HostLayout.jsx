@@ -1,8 +1,31 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 
 export default function HostLayout() {
+
+  const activeStyle = {
+    fontWeight: "bold",
+    textDecoration: "underline",
+  }
+
+  function Navigation() {
+    return (
+      <div className="dashboard__tabs">
+        <ul>
+          <li>
+            <NavLink style={({ isActive }) => isActive ? activeStyle : null} to="/host" end>Dashboard</NavLink>
+          </li>
+          <li>
+            <NavLink style={({ isActive }) => isActive ? activeStyle : null} to="income">Income</NavLink>
+          </li>
+          <li>
+            <NavLink style={({ isActive }) => isActive ? activeStyle : null} to="reviews">Reviews</NavLink>
+          </li>
+        </ul>
+      </div>
+    );
+  }
   return (
     <>
       <Navigation />
@@ -62,20 +85,3 @@ export default function HostLayout() {
 
 
 
-function Navigation() {
-  return (
-    <div className="dashboard__tabs">
-      <ul>
-        <li>
-          <Link to="/dashboard">Dashboard</Link>
-        </li>
-        <li>
-          <Link to="/income">Income</Link>
-        </li>
-        <li>
-          <Link to="/reviews">Reviews</Link>
-        </li>
-      </ul>
-    </div>
-  );
-}

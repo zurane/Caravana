@@ -7,7 +7,6 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Vans from "./pages/Vans";
 import Detail from "./pages/VanDetail";
-// import Host from "./pages/host/Host";
 import Dashboard from "./pages/host/Dashboard";
 import Income from "./pages/host/Income";
 import Reviews from "./pages/host/Reviews";
@@ -27,12 +26,12 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="vans" element={<Vans />} />
-          <Route path="vans/:id" element={<Detail />} />
+          <Route path="vans/:id" element={<Detail />} />\
 
-          <Route path="/host" element={<HostLayout />}>
+          <Route path="host" element={<HostLayout />}>
             <Route index element={<Dashboard />} />
-            <Route path="host/income" element={<Income />} />
-            <Route path="host/reviews" element={<Reviews />} />
+            <Route path="income" element={<Income />} />
+            <Route path="reviews" element={<Reviews />} />
           </Route>
         </Route>
       </Routes>
