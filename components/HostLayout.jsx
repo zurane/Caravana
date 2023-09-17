@@ -14,10 +14,13 @@ export default function HostLayout() {
       <div className="dashboard__tabs">
         <ul>
           <li>
-            <NavLink style={({ isActive }) => isActive ? activeStyle : null} to="/host" end>Dashboard</NavLink>
+            <NavLink style={({ isActive }) => isActive ? activeStyle : null} to="/host" end={true}>Dashboard</NavLink>
           </li>
           <li>
             <NavLink style={({ isActive }) => isActive ? activeStyle : null} to="income">Income</NavLink>
+          </li>
+          <li>
+            <NavLink style={({ isActive }) => isActive ? activeStyle : null} to="hostvans">Vans</NavLink>
           </li>
           <li>
             <NavLink style={({ isActive }) => isActive ? activeStyle : null} to="reviews">Reviews</NavLink>
