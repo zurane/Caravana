@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 export default function Vans() {
   const [vans, setVans] = React.useState([]);
-
   // Use the global fetch request function to fetch data from server.js file.
   // Maps over the data and render it on the User Interface.
   React.useEffect(() => {
