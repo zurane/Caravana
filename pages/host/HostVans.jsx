@@ -18,10 +18,11 @@ export default function HostVans() {
             className="vans-list-container"
         >
             <div className="van-card">
-                <div  key={van.id}>
+                <div key={van.id}>
                     <img src={van.imageUrl} alt={`Photo of ${van.name}`} />
                 </div>
                 <div className="van-details">
+                    <span className="type-badge">{van.type}</span>
                     <h3>{van.name}</h3>
                     <span>{van.price}/day</span>
                 </div>
