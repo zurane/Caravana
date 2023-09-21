@@ -1,8 +1,11 @@
 import React from "react";
+import { useOutletContext } from "react-router-dom";
 
 export default function HostVanInfo(){
-
+const {caravan} = useOutletContext();
     return (
-        <h1>this is the Pricing section</h1>
+        <>
+        <span>R{caravan.price}/day</span>
+        </>
     )
 }

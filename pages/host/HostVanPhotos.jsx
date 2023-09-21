@@ -1,8 +1,12 @@
 import React from "react";
+import { useOutletContext } from "react-router-dom";
 
 export default function HostVanInfo() {
 
+    const {caravan} = useOutletContext();
     return (
-        <h1>this is the Photos section</h1>
+        <>
+        <img src={caravan.imageUrl} alt={`${caravan.name}`}/>
+        </>
     )
 }

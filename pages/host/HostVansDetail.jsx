@@ -35,11 +35,34 @@ export default function HostVansDetail() {
                         </div>
                     </div>
                     <Tabs />
-                    <Outlet />
+                    <Outlet context={{ caravan }} />
                 </div>
             </>
         );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function Tabs() {
     return (
