@@ -79,8 +79,9 @@ export default function Vans() {
           <button onClick={() => handleFilterChange("type", "simple")}>
             Simple
           </button>
-          {/* TBD : Use conditional rendering to give this button an active state */}
-          <button onClick={() => handleFilterChange("type", "luxury")}>
+          {/* Used conditional rendering to give this button an active state */}
+          <button onClick={() => handleFilterChange("type", "luxury")}
+          className ={`${typeFilter === "luxury" ? "selected" : " "}`}>
             Luxury
           </button>
           {/* TBD : Use conditional rendering to give this button an active state */}
