@@ -6,6 +6,8 @@ export default function Vans() {
   const [searchParams, setSearchParams] = useSearchParams();
   const typeFilter = searchParams.get("type");
 
+  console.log(searchParams.toString());
+
   // Use the global fetch request function to fetch data from server.js file.
   // Maps over the data and render it on the User Interface.
   React.useEffect(() => {
@@ -21,7 +23,9 @@ export default function Vans() {
     : vans;
   const caraVans = displayedVans.map((char) => (
     <div className="cards" key={char.id}>
-      <Link to={`/vans/${char.id}`}>
+      {/* The state prop will take any value passed to it and store it, so it can be accessible */}
+      {/* for example below we want to store the searchParams value in a string format */}
+      <Link to={`${char.id}`} state={{ search:`?${searchParams.toString()}`, type : typeFilter}}>
         <div className="cards-row">
           <div className="van-card">
             <img src={char.imageUrl} alt="caravan image" width="100%" />
@@ -35,7 +39,6 @@ export default function Vans() {
       </Link>
     </div>
   ));
-
 
   // function genNewSearchParamString(key, value){
 
@@ -59,33 +62,36 @@ export default function Vans() {
       } else {
         prevParams.set(key, value);
       }
-      return prevParams
+      return prevParams;
     });
   }
-
   return (
     <>
       <section className="page-feed-section">
         <h2>Explore our caravan options</h2>
         <div className="tabs">
           {/* Used conditional rendering of the "clear filter" button */}
-          {typeFilter ? (
-            <Link to=".">
-              Clear search
-            </Link>
-          ) : null}
+          {typeFilter ? <Link to=".">Clear search</Link> : null}
 
           {/* TBD : Use conditional rendering to give this button an active state */}
-          <button onClick={() => handleFilterChange("type", "simple")}>
+          <button
+            onClick={() => handleFilterChange("type", "simple")}
+            className={`${typeFilter === "simple" ? "selected" : " "}`}
+          >
             Simple
           </button>
           {/* Used conditional rendering to give this button an active state */}
-          <button onClick={() => handleFilterChange("type", "luxury")}
-          className ={`${typeFilter === "luxury" ? "selected" : " "}`}>
+          <button
+            onClick={() => handleFilterChange("type", "luxury")}
+            className={`${typeFilter === "luxury" ? "selected" : " "}`}
+          >
             Luxury
           </button>
           {/* TBD : Use conditional rendering to give this button an active state */}
-          <button onClick={() => handleFilterChange("type", "rugged")}>
+          <button
+            onClick={() => handleFilterChange("type", "rugged")}
+            className={`${typeFilter === "rugged" ? "selected" : " "}`}
+          >
             Rugged
           </button>
         </div>

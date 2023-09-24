@@ -17,7 +17,7 @@ body {
   color: #4d4d4d;
   text-align: right;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 600;
   line-height: 22.923px;
@@ -34,7 +34,7 @@ body {
 .navigation-bar > .logo a {
   color: #000;
   font-family: Inter;
-  font-size: 25.353px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 900;
   line-height: 40.271px;
@@ -306,12 +306,16 @@ span {
 }
 
 .host-van-detail {
-
   margin-left: 20px;
-  bottom:0px;
+  bottom: 0px;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .selected {
-
-  background-color: yellow;
+  background-color: rgb(255, 162, 41);
 }
