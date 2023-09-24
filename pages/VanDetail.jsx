@@ -19,6 +19,7 @@ export default function VanDetail() {
   // state? checks for the search value and assigns it to the search variable otherwise returns an empty string string.
   // Location returns the location object from the current URL
   // Because we have stored the search and type values in the state prop accessible through the useLocation hook.
+  // We now use the useLocation hook to access the state props and do something with it.
   const search = location.state?.search || " "
   const currentUrl = location.state?.search.split("=");
   return (

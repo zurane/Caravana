@@ -1,22 +1,36 @@
 import React from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams, useLoaderData } from "react-router-dom";
+import { getVans } from "../api";
+
+export function loader() {
+  return getVans();
+}
 
 export default function Vans() {
-  const [vans, setVans] = React.useState([]);
+ 
   const [searchParams, setSearchParams] = useSearchParams();
   const typeFilter = searchParams.get("type");
-
+  const [error, setErr] = React.useState(false);
+  const vans = useLoaderData();
+  console.log(vans);
   console.log(searchParams.toString());
 
   // Use the global fetch request function to fetch data from server.js file.
   // Maps over the data and render it on the User Interface.
-  React.useEffect(() => {
-    fetch("/api/vans")
-      .then((res) => res.json())
-      .then((data) => {
-        setVans(data.vans);
-      });
-  }, []);
+  // React.useEffect(() => {
+  //   async function loadVanData() {
+  //     load(true);
+  //     try {
+  //       const vansData = await getVans();
+  //       setVans(vansData);
+  //     } catch (error) {
+  //       setErr(error);
+  //     } finally {
+  //       load(false);
+  //     }
+  //   }
+  //   loadVanData();
+  // }, []);
 
   const displayedVans = typeFilter
     ? vans.filter((char) => char.type === typeFilter)
@@ -25,7 +39,12 @@ export default function Vans() {
     <div className="cards" key={char.id}>
       {/* The state prop will take any value passed to it and store it, so it can be accessible */}
       {/* for example below we want to store the searchParams value in a string format */}
-      <Link to={`${char.id}`} state={{ search:`?${searchParams.toString()}`, type : typeFilter}}>
+      {/* Anytime you pass data along via the state property, that data will be available on the location's state property */}
+      {/* if you need to pass data from Link through to the new component (in our case to the vansDetail component /Route) that's being rendered, pass Links a state prop with the data you want to pass through. */}
+      <Link
+        to={`${char.id}`}
+        state={{ search: `?${searchParams.toString()}`}}
+      >
         <div className="cards-row">
           <div className="van-card">
             <img src={char.imageUrl} alt="caravan image" width="100%" />
@@ -40,21 +59,6 @@ export default function Vans() {
     </div>
   ));
 
-  // function genNewSearchParamString(key, value){
-
-  //   const sp = new URLSearchParams(searchParams)
-
-  //   if (value === null){
-
-  //     sp.delete(key)
-  //   } else {
-
-  //     sp.set(key, value)
-  //   }
-
-  //   `?${sp.toString()}`
-  // }
-
   function handleFilterChange(key, value) {
     setSearchParams((prevParams) => {
       if (key === null) {
@@ -65,6 +69,11 @@ export default function Vans() {
       return prevParams;
     });
   }
+
+  if (error) {
+    return <h3>{error.message}</h3>
+  }
+
   return (
     <>
       <section className="page-feed-section">
@@ -97,6 +106,9 @@ export default function Vans() {
         </div>
         <div className="components">{caraVans}</div>
       </section>
+
+
+
     </>
   );
 }
