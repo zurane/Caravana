@@ -2,8 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 // The Router package or module is a standalone and does not come with the React
 import {
-  BrowserRouter,
-  Routes,
   Route,
   createBrowserRouter,
   createRoutesFromElements,
@@ -15,13 +13,15 @@ import ErrorPage from "./pages/404";
 import HandleError from "./components/HandleError";
 import About from "./pages/About";
 import Vans, { loader as vansPageData } from "./pages/Vans";
-import Detail from "./pages/VanDetail";
+import Detail, { loader as vanData } from "./pages/VanDetail";
 import Dashboard from "./pages/host/Dashboard";
 import Income from "./pages/host/Income";
 import Reviews from "./pages/host/Reviews";
 import HostLayout from "./components/HostLayout";
-import HostVans from "./pages/host/HostVans";
-import HostVansDetail from "./pages/host/HostVansDetail";
+import HostVans, { loader as hostVansData } from "./pages/host/HostVans";
+import HostVansDetail, {
+  loader as hostVanOverview,
+} from "./pages/host/HostVansDetail";
 import HostVanInfo from "./pages/Host/HostVanInfo/";
 import HostVanPricing from "./pages/Host/HostVanPricing/";
 import HostVanPhotos from "./pages/Host/HostVanPhotos/";
@@ -40,16 +40,56 @@ function App() {
           loader={vansPageData}
           errorElement={<HandleError />}
         />
-        <Route path="vans/:id" element={<Detail />} />
+        <Route path="vans/:id" element={<Detail />} loader={vanData} />
         <Route path="host" element={<HostLayout />}>
-          <Route index element={<Dashboard />} />
-          <Route path="income" element={<Income />} />
-          <Route path="reviews" element={<Reviews />} />
-          <Route path="vans" element={<HostVans />} />
-          <Route path="vans/:id" element={<HostVansDetail />}>
-            <Route index element={<HostVanInfo />} />
-            <Route path="pricing" element={<HostVanPricing />} />
-            <Route path="photos" element={<HostVanPhotos />} />
+          <Route
+            index
+            element={<Dashboard />}
+            loader={async () => {
+              return null;
+            }}
+          />
+          <Route
+            path="income"
+            element={<Income />}
+            loader={async () => {
+              return null;
+            }}
+          />
+          <Route
+            path="reviews"
+            element={<Reviews />}
+            loader={async () => {
+              return null;
+            }}
+          />
+          <Route path="vans" element={<HostVans />} loader={hostVansData} />
+          <Route
+            path="vans/:id"
+            element={<HostVansDetail />}
+            loader={hostVanOverview}
+          >
+            <Route
+              index
+              element={<HostVanInfo />}
+              loader={async () => {
+                return null;
+              }}
+            />
+            <Route
+              path="pricing"
+              element={<HostVanPricing />}
+              loader={async () => {
+                return null;
+              }}
+            />
+            <Route
+              path="photos"
+              element={<HostVanPhotos />}
+              loader={async () => {
+                return null;
+              }}
+            />
           </Route>
         </Route>
       </Route>

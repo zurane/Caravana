@@ -288,6 +288,7 @@ span {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
 }
+
 .vans-list-container {
   display: block;
   margin: 10px 20px;
@@ -314,6 +315,10 @@ button {
   border: none;
   border-radius: 5px;
   padding: 5px;
+}
+
+.tabs button {
+  cursor: pointer;
 }
 
 .selected {
