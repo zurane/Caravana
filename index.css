@@ -324,3 +324,17 @@ button {
 .selected {
   background-color: rgb(255, 162, 41);
 }
+
+/* Login form styling */
+
+.form .form-container  {
+  display: flex;
+  justify-content: center;
+}
+
+.form h3 {
+  text-align: center;
+}
+
+
+

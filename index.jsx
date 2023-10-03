@@ -14,6 +14,7 @@ import HandleError from "./components/HandleError";
 import About from "./pages/About";
 import Vans, { loader as vansPageData } from "./pages/Vans";
 import Detail, { loader as vanData } from "./pages/VanDetail";
+import Login, {loader as urlQueryString} from "./pages/Login";
 import Dashboard from "./pages/host/Dashboard";
 import Income from "./pages/host/Income";
 import Reviews from "./pages/host/Reviews";
@@ -25,6 +26,7 @@ import HostVansDetail, {
 import HostVanInfo from "./pages/Host/HostVanInfo/";
 import HostVanPricing from "./pages/Host/HostVanPricing/";
 import HostVanPhotos from "./pages/Host/HostVanPhotos/";
+import { requiredAuth } from "./utils";
 import "./server";
 
 function App() {
@@ -34,6 +36,7 @@ function App() {
         <Route path="*" element={<ErrorPage />}></Route>
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
+        <Route path="login" element={<Login />} loader={urlQueryString} />
         <Route
           path="vans"
           element={<Vans />}
@@ -41,7 +44,11 @@ function App() {
           errorElement={<HandleError />}
         />
         <Route path="vans/:id" element={<Detail />} loader={vanData} />
-        <Route path="host" element={<HostLayout />}>
+        <Route
+          path="host"
+          element={<HostLayout />}
+          loader={async () => await requiredAuth()}
+        >
           <Route
             index
             element={<Dashboard />}
@@ -63,7 +70,12 @@ function App() {
               return null;
             }}
           />
-          <Route path="vans" element={<HostVans />} loader={hostVansData} />
+          <Route
+            path="vans"
+            element={<HostVans />}
+            loader={hostVansData}
+            errorElement={<HandleError />}
+          />
           <Route
             path="vans/:id"
             element={<HostVansDetail />}

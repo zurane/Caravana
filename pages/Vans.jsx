@@ -9,9 +9,9 @@ export function loader() {
 export default function Vans() {
   const [searchParams, setSearchParams] = useSearchParams();
   const typeFilter = searchParams.get("type");
-  const [error, setErr] = React.useState(false);
+  
+  // const [error, setErr] = React.useState(false);
   const vans = useLoaderData();
-
 
   // Use the global fetch request function to fetch data from server.js file.
   // Maps over the data and render it on the User Interface.
@@ -68,10 +68,6 @@ export default function Vans() {
       }
       return prevParams;
     });
-  }
-
-  if (error) {
-    return <h3>{error.message}</h3>
   }
 
   return (
