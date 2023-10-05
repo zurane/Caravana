@@ -9,3 +9,6 @@ export function requiredAuth() {
         throw redirect("/login?message=You must login first")
     }
 }
+
+// Function to be passed to our Login page.
+

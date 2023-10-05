@@ -5,25 +5,42 @@ export async function getVans(id) {
     throw {
       message: "Error fetching data from the server",
       statusText: res.statusText,
-      status: res.status
-    }
+      status: res.status,
+    };
   }
   const data = await res.json();
-  return data.vans
+  return data.vans;
 }
 
 export async function getVansData(id) {
-
-  const url = id ? `/api/host/vans/${id}` : "/api/host/vans"
+  const url = id ? `/api/host/vans/${id}` : "/api/host/vans";
   const res = await fetch(url);
   if (!res.ok) {
     throw {
       message: "Error fetching data from the server",
       statusText: res.statusText,
-      status: res.status
-    }
+      status: res.status,
+    };
   }
-  const data = await res.json()
-  return data.vans
+  const data = await res.json();
+  return data.vans;
 }
 
+export async function login(credentials) {
+  const res = await fetch("/api/login", {
+    method: "post",
+    body: JSON.stringify(credentials),
+  });
+
+  const data = await res.json();
+
+  if (!res.ok) {
+    throw {
+      message: data.message,
+      statusText: res.statusText,
+      status: res.status,
+    };
+  }
+
+  return data;
+}
