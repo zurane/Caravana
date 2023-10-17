@@ -31,9 +31,7 @@ export async function login(credentials) {
     method: "post",
     body: JSON.stringify(credentials),
   });
-
   const data = await res.json();
-
   if (!res.ok) {
     throw {
       message: data.message,

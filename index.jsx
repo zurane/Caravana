@@ -14,7 +14,7 @@ import HandleError from "./components/HandleError";
 import About from "./pages/About";
 import Vans, { loader as vansPageData } from "./pages/Vans";
 import Detail, { loader as vanData } from "./pages/VanDetail";
-import Login, {loader as urlQueryString} from "./pages/Login";
+import Login, { loader as urlQueryString, action as loginAction } from "./pages/Login";
 import Dashboard from "./pages/host/Dashboard";
 import Income from "./pages/host/Income";
 import Reviews from "./pages/host/Reviews";
@@ -36,7 +36,7 @@ function App() {
         <Route path="*" element={<ErrorPage />}></Route>
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
-        <Route path="login" element={<Login />} loader={urlQueryString} />
+        <Route path="login" element={<Login />} loader={urlQueryString} action={loginAction} />
         <Route
           path="vans"
           element={<Vans />}

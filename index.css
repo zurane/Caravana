@@ -1,40 +1,42 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html,
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   height: 100vh;
   overflow-x: hidden;
 }
 
-.navigation-bar > .links a {
+.page-align-center {
+  background: pink;
+  max-width: 1590px;
+  justify-content: center;
+}
+
+.links a {
   text-decoration: none;
   padding: 15px;
   color: #4d4d4d;
-  text-align: right;
   font-family: Inter;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
-  line-height: 22.923px;
 }
 
 .navigation-bar {
   display: flex;
-  padding: 10.001px 25.819px 10.623px 26px;
+  padding: 10px 200px;
   justify-content: space-between;
   align-items: center;
-  /* gap: 235.213px; */
 }
 
 .navigation-bar > .logo a {
   color: #000;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 900;
   line-height: 40.271px;
@@ -51,10 +53,9 @@ body {
 header {
   height: 386.696px;
   flex-shrink: 0;
-  background-image: url(./assets/images/image-53.png);
+  background-image: url(./assets/images/Rectangle\ 4.jpg);
   background-size: cover;
   background-position: center;
-
   padding: 30px;
 }
 
@@ -112,7 +113,7 @@ header p {
 }
 
 .about-header {
-  background-image: url(./assets/images/image-55.png);
+  background-image: url(./assets/images/Rectangle\ 4.jpg);
   width: 548;
   height: 233.213px;
   background-position: center;
@@ -327,7 +328,7 @@ button {
 
 /* Login form styling */
 
-.form .form-container  {
+.form .form-container {
   display: flex;
   justify-content: center;
 }
@@ -336,5 +337,8 @@ button {
   text-align: center;
 }
 
-
-
+/* .login-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+} */
