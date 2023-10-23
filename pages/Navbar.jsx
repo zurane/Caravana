@@ -24,9 +24,8 @@ export default function Navbar() {
             <NavLink style={({ isActive }) => isActive ? activeStyle : null} to="/About">About</NavLink>
             <NavLink style={({ isActive }) => isActive ? activeStyle : null} to="/host">Support</NavLink>
             <NavLink style={({ isActive }) => isActive ? activeStyle : null} to="/Host">Host</NavLink>
-            <NavLink className={"login-btn"}><Icon fontSize="small">account_circle</Icon >Login</NavLink>
+            <NavLink className={"login-btn"} to="/login"><Icon>account_circle</Icon >Login</NavLink>
           </Stack>
-
         </div>
       </nav>
       <Outlet />

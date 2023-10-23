@@ -24,13 +24,18 @@ body {
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
+  vertical-align: bottom;
+  align-items: center;
+  display: inline-flex;
 }
 
 .navigation-bar {
   display: flex;
-  padding: 10px 200px;
+  padding: 0px 200px;
   justify-content: space-between;
   align-items: center;
+  background: #fff;
+  box-shadow: 0px 3px 3px 0px rgba(214, 207, 207, 0.25);
 }
 
 .navigation-bar > .logo a {
@@ -51,34 +56,65 @@ body {
 }
 
 header {
-  height: 386.696px;
+  height: 70vh;
   flex-shrink: 0;
   background-image: url(./assets/images/Rectangle\ 4.jpg);
   background-size: cover;
   background-position: center;
-  padding: 30px;
+  position: relative;
 }
 
-header h1 {
-  color: #fff;
-  font-family: Inter;
-  font-size: 33px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 42px;
+.hero {
+  background: #2b3427;
+  position: absolute;
+  left: 15px;
+  top: 4px;
+  transform: translate(-6%, 126%);
+  float: left;
 }
 
-header p {
+.hero-content-wrapper {
+  padding: 20px 80px 45px 187px;
+}
+.hero-content-wrapper .btn {
+  border-radius: 5px;
+  background: linear-gradient(180deg, #57d51c 0%, #35900b 100%);
+  padding: 15px 30px;
+  color: white;
+  text-decoration: none;
+  margin-right: 5px;
+}
+.hero-content-wrapper .btn-2 {
+  border-radius: 5px;
+  border: 1px solid #fff;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  margin-left: 5px;
+}
+.hero-content-wrapper span {
   color: #fff;
-  font-family: Inter;
-  font-size: 15px;
+  font-family: Ubuntu;
+  font-size: 50px;
   font-style: normal;
-  font-weight: 300;
-  line-height: 24px;
+  font-weight: 700;
+  line-height: 108.523%; /* 43.409px */
+  letter-spacing: -0.6px;
+}
+
+.hero-content-wrapper p {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 108.523%; /* 17.364px */
+  letter-spacing: -0.24px;
+  margin: 23px 0px;
 }
 
 .find-van-btn {
-  width: 100%;
+  width: 15%;
   border-radius: 5px;
   background: #ff8c38;
   text-align: center;
@@ -337,8 +373,39 @@ button {
   text-align: center;
 }
 
-/* .login-btn {
-  display: inline-flex;
-  align-items: center;
+.login-btn {
   gap: 5px;
+  border-left: 1px solid #f4f4f4;
+  border-right: 1px solid #f4f4f4;
+}
+
+/* Header bottom tabs */
+
+.quick-actions-bar {
+  padding: 18px;
+  border-top: 3px solid #6ca94f;
+  background: #f2f2f2;
+}
+.action-tab {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+  padding: 10px 0px 0px 10px;
+}
+
+.action-tab h4 {
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* .action-tab .tab:first-child {
+  border-left: 1px solid #dbdbdb;
+  border-right: 1px solid #dbdbdb;
+  padding: 0px 20px 0px 20px;;
 } */
