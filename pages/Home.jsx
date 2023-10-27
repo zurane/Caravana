@@ -1,9 +1,14 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, useLoaderData } from "react-router-dom";
 import Icon from '@mui/material/Icon';
 
 
+export function loader() {
+  getVansData();
+}
+
 export default function Home() {
+  const vans = useLoaderData();
   return (
     <React.Fragment>
       <header>
@@ -26,15 +31,19 @@ export default function Home() {
             <h4>Manage my booking</h4>
           </div>
           <div className="tab">
-            <Icon>radar</Icon>
+            <Icon>inventory_2</Icon>
             <h4>Retrieve my invoice</h4>
           </div>
           <div className="tab">
-            <Icon>radar</Icon>
+            <Icon>info</Icon>
             <h4>Find an answer</h4>
           </div>
         </div>
       </div>
+
+      <section className="vans">
+
+      </section>
     </React.Fragment>
   );
 }

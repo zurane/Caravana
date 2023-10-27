@@ -56,7 +56,7 @@ body {
 }
 
 header {
-  height: 70vh;
+  height: 60vh;
   flex-shrink: 0;
   background-image: url(./assets/images/Rectangle\ 4.jpg);
   background-size: cover;
@@ -67,14 +67,12 @@ header {
 .hero {
   background: #2b3427;
   position: absolute;
-  left: 15px;
-  top: 4px;
-  transform: translate(-6%, 126%);
-  float: left;
+  left: 0;
+  bottom: 0;
 }
 
 .hero-content-wrapper {
-  padding: 20px 80px 45px 187px;
+  padding: 25px 80px 50px 187px;
 }
 .hero-content-wrapper .btn {
   border-radius: 5px;
@@ -390,8 +388,15 @@ button {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  
   padding: 10px 0px 0px 10px;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  cursor: pointer;
 }
 
 .action-tab h4 {
@@ -403,9 +408,3 @@ button {
   font-weight: 400;
   line-height: normal;
 }
-
-/* .action-tab .tab:first-child {
-  border-left: 1px solid #dbdbdb;
-  border-right: 1px solid #dbdbdb;
-  padding: 0px 20px 0px 20px;;
-} */
