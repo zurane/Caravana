@@ -1,6 +1,8 @@
 import React from "react";
 import { Link, useSearchParams, useLoaderData } from "react-router-dom";
 import { getVans } from "../api";
+import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
+import ActionsTab from "../components/Actionstab";
 
 export function loader() {
   return getVans();
@@ -9,7 +11,7 @@ export function loader() {
 export default function Vans() {
   const [searchParams, setSearchParams] = useSearchParams();
   const typeFilter = searchParams.get("type");
-  
+
   // const [error, setErr] = React.useState(false);
   const vans = useLoaderData();
 
@@ -40,19 +42,24 @@ export default function Vans() {
       {/* for example below we want to store the searchParams value in a string format */}
       {/* Anytime you pass data along via the state property, that data will be available on the location's state property */}
       {/* if you need to pass data from Link through to the new component (in our case to the vansDetail component /Route) that's being rendered, pass Links a state prop with the data you want to pass through. */}
-     
+
       <Link
         to={`${char.id}`}
-        state={{ search: `?${searchParams.toString()}`}}
+        state={{ search: `?${searchParams.toString()}` }}
       >
-        <div className="cards-row">
-          <div className="van-card">
-            <img src={char.imageUrl} alt="caravan image" width="100%" />
-            <span className="title-and-price">
-              <h4>{char.name}</h4>
-              <p>R{char.price}/day</p>
-            </span>
-            <span className="type-badge">{char.type}</span>
+        <div className="landing__page__vans" key={char.id}>
+          <div className="landing__page__van__card">
+            <img src={char.imageUrl} alt={char.name} width="100%" />
+            <div className="landing__page__van__card__details">
+              <span className="van-type">{char.type}</span>
+            </div>
+            <div className="van-info">
+              <p>{char.name}</p>
+              <h4>${char.price}<span>/day</span></h4>
+            </div>
+            <div className="rent__this__van__btn">
+              <Link>Rent this van</Link>
+            </div>
           </div>
         </div>
       </Link>
@@ -72,11 +79,11 @@ export default function Vans() {
 
   return (
     <>
+      <ActionsTab />
       <section className="page-feed-section">
-        <h2>Explore our caravan options</h2>
-        <div className="tabs">
+        <div className="tabs filters">
           {/* Used conditional rendering of the "clear filter" button */}
-          {typeFilter ? <Link to=".">Clear search</Link> : null}
+          {typeFilter ? <Link to="."><CancelOutlinedIcon /></Link> : null}
 
           {/* TBD : Use conditional rendering to give this button an active state */}
           <button
@@ -100,7 +107,7 @@ export default function Vans() {
             Rugged
           </button>
         </div>
-        <div className="components">{caraVans}</div>
+        <div className="vans__feed homepage__vans__wrapper">{caraVans}</div>
       </section>
     </>
   );

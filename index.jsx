@@ -8,7 +8,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Navbar from "./pages/Navbar";
-import Home from "./pages/Home";
+import Home, { loader as HomeVans } from "./pages/Home";
 import ErrorPage from "./pages/404";
 import HandleError from "./components/HandleError";
 import About from "./pages/About";
@@ -34,7 +34,7 @@ function App() {
     createRoutesFromElements(
       <Route element={<Navbar />}>
         <Route path="*" element={<ErrorPage />}></Route>
-        <Route index element={<Home />} />
+        <Route index element={<Home />} loader={HomeVans}  errorElement={<HandleError />} />
         <Route path="about" element={<About />} />
         <Route path="login" element={<Login />} loader={urlQueryString} action={loginAction} />
         <Route

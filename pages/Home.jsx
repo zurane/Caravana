@@ -1,14 +1,40 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Link, useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
+import ActionsTab from "./../components/Actionstab";
 import Icon from '@mui/material/Icon';
-
+import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
+import ChevronRightOutlinedIcon from '@mui/icons-material/ChevronRightOutlined';
+import { getVans } from "./../api";
 
 export function loader() {
-  getVansData();
+  return getVans();
 }
 
 export default function Home() {
+
+  // fetch the vans data, map and display on the UI.
   const vans = useLoaderData();
+
+  const landingPageVans = vans.slice(2, 6).map((van) => (
+    <div className="landing__page__vans" key={van.id}>
+      <div className="landing__page__van__card">
+        <img src={van.imageUrl} alt={van.name} width="100%" />
+        <div className="landing__page__van__card__details">
+          <span className="van-type">{van.type}</span>
+        </div>
+        <div className="van-info">
+          <p>{van.name}</p>
+          <h4>${van.price}<span>/day</span></h4>
+        </div>
+        <div className="rent__this__van__btn">
+          <Link to={`/Vans/${van.id}`}>Rent this van</Link>
+        </div>
+      </div>
+    </div>
+  ));
+
+
   return (
     <React.Fragment>
       <header>
@@ -24,26 +50,13 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <div className="quick-actions-bar">
-        <div className="action-tab">
-          <div className="tab">
-            <Icon>radar</Icon>
-            <h4>Manage my booking</h4>
-          </div>
-          <div className="tab">
-            <Icon>inventory_2</Icon>
-            <h4>Retrieve my invoice</h4>
-          </div>
-          <div className="tab">
-            <Icon>info</Icon>
-            <h4>Find an answer</h4>
-          </div>
+      <ActionsTab />
+      <div className="homepage__vans__wrapper">
+        <h3>Recommended for you</h3>
+        <div className="recommended__vans">
+          {landingPageVans}
         </div>
       </div>
-
-      <section className="vans">
-
-      </section>
     </React.Fragment>
   );
 }

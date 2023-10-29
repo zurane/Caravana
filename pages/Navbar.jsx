@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import Footer from "./Footer"
+import ActionsTab from "./../components/Actionstab";
 import Icon from '@mui/material/Icon';
 import Stack from '@mui/material/Stack';
 

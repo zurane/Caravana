@@ -7,7 +7,6 @@
 html,
 body {
   height: 100vh;
-  overflow-x: hidden;
 }
 
 .page-align-center {
@@ -34,7 +33,7 @@ body {
   padding: 0px 200px;
   justify-content: space-between;
   align-items: center;
-  background: #fff;
+  background: #ffffff;
   box-shadow: 0px 3px 3px 0px rgba(214, 207, 207, 0.25);
 }
 
@@ -56,7 +55,7 @@ body {
 }
 
 header {
-  height: 60vh;
+  height: 80vh;
   flex-shrink: 0;
   background-image: url(./assets/images/Rectangle\ 4.jpg);
   background-size: cover;
@@ -195,11 +194,15 @@ footer {
   align-items: center;
   gap: 10px;
   margin-bottom: 20px;
+  padding-left: 170px;
+  font-family: Roboto;
+  font-size: 14px;
 }
 
 .tabs > span {
   border-radius: 5px;
-  background: #ffead0;
+  border: 1px solid #ffead0;
+  background: none;
   padding: 6px 26px 7px 26px;
   font-family: "Roboto", sans-serif;
   font-size: 10px;
@@ -257,15 +260,34 @@ footer {
 .van-overview {
   margin: 10px;
   padding: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-.van-overview.type-badge {
-  margin-top: 15px;
+.van-titles {
+  display: inline-flex;
+  justify-content: space-around;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+.van-titles .van-name {
+  font-size: 25px;
+  font-family: Inter;
+}
+.van-overview .type-badge {
   font-size: 14px;
+}
+
+.van-description-title {
+  font-family: Inter;
+  font-size: 16px;
 }
 
 .van-overview > img {
   border-radius: 5px;
+  width: 600px;
 }
 
 .van-overview > h4 {
@@ -350,14 +372,25 @@ button {
   border: none;
   border-radius: 5px;
   padding: 5px;
+  background: none;
+  border: 1px solid #666363;
 }
 
 .tabs button {
   cursor: pointer;
 }
 
+.filters a {
+  text-decoration: none !important;
+  color: black;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+}
+
 .selected {
-  background-color: rgb(255, 162, 41);
+  background-color: rgb(0, 0, 0);
+  color: #fff;
 }
 
 /* Login form styling */
@@ -392,11 +425,11 @@ button {
 }
 
 .tab {
+  cursor: pointer;
+  text-align: center;
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-
-  cursor: pointer;
+  gap: 8px;
 }
 
 .action-tab h4 {
@@ -407,4 +440,105 @@ button {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+}
+
+/* landing page vans styling */
+.homepage__vans__wrapper {
+  max-width: 1320px;
+  margin: auto;
+  padding-top: 35px;
+}
+
+.homepage__vans__wrapper > h3 {
+  font-family: Ubuntu;
+}
+.recommended__vans {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  padding: 20px 0px 50px 0px;
+}
+
+.vans__feed {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  padding: 20px 0px 50px 0px;
+}
+
+.landing__page__van__card {
+  position: relative;
+}
+
+.landing__page__van__card > img {
+  border-radius: 5px 5px 0px 0px;
+}
+.landing__page__van__card__details {
+  position: absolute;
+  left: 18px;
+  top: 16px;
+}
+
+.landing__page__van__card__details > span {
+  background: #f7f6f6;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+
+.van-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8px;
+}
+.van-info h4 {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 108.523%; /* 26.045px */
+  letter-spacing: -0.36px;
+}
+
+.van-info p {
+  color: #404042;
+  text-align: center;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 108.523%; /* 16.278px */
+  letter-spacing: -0.225px;
+}
+
+.rent__this__van__btn {
+  width: 100%;
+  border-radius: 5px;
+  background: linear-gradient(180deg, #302e2e 0%, #000 100%);
+  padding: 15px 0px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.rent__this__van__btn a {
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.24px;
+
+  text-decoration: none;
 }
