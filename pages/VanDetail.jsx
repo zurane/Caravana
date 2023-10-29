@@ -1,17 +1,14 @@
 import React from "react";
 import { useLocation, useParams, useLoaderData } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { getVans } from "../api"
-import ChevronLeftOutlinedIcon from '@mui/icons-material/ChevronLeftOutlined';
-
+import { getVans } from "../api";
+import ChevronLeftOutlinedIcon from "@mui/icons-material/ChevronLeftOutlined";
 
 export function loader({ params }) {
-  return getVans(params.id)
+  return getVans(params.id);
 }
 
-
 export default function VanDetail() {
-
   // Always remember if your application is ever gonna have some kind of dynamic states,
   // use the useState function to update the state of your UI or application.
   // const [caravans, render] = React.useState(null);
@@ -39,21 +36,31 @@ export default function VanDetail() {
 
   return (
     <div className="caravan-overview-container">
-      <Link to={`..${search}`} relative="path">
-        <span><ChevronLeftOutlinedIcon />{`Back to ${currentUrl[1] || "all"} vans`}</span>
-      </Link>
+      <div className="breadcrumb-bar">
+        <Link to={`..${search}`} relative="path">
+          <span className="back-btn">
+            <ChevronLeftOutlinedIcon />
+            {`Back to ${currentUrl[1] || "all"} vans`}
+          </span>
+        </Link>
+      </div>
       <div className="van-overview van-detailed-page homepage__vans__wrapper">
-        <img src={caravans.imageUrl} alt="caravan-image" width="50%" />
-        <div>
+        <img src={caravans.imageUrl} alt="caravan-image" width="100%" />
+        <div className="details-container">
           <div className="van-titles">
             <h4 className="van-name">{caravans.name}</h4>
             <span className="type-badge">{caravans.type}</span>
           </div>
-          <h3 className="van-description-title">Description</h3>
-          <p className="van-description">{caravans.description}</p>
-          <span className="price">R{caravans.price}/day</span>
-          <div className="find-van-btn">
-            <Link>Rent this van</Link>
+          <div className="van-description-container">
+            <h3 className="van-description-title">Description</h3>
+            <p className="van-description">{caravans.description}</p>
+          </div>
+          <div className="container-bottom">
+            <p>Price</p>
+            <span className="price">${caravans.price}</span>
+            <div className="find-van-btn">
+              <Link>Continue to checkout</Link>
+            </div>
           </div>
         </div>
       </div>
