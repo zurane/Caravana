@@ -6,7 +6,7 @@ export default function About(){
     <>
       <header className="about-header">
       </header>
-     <section className="main">
+     <section className="main homepage__vans__wrapper">
         <h2>
             Don’t squeeze in a sedan when you could relax in a van.
         </h2>
