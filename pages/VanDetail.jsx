@@ -3,6 +3,12 @@ import { useLocation, useParams, useLoaderData } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { getVans } from "../api";
 import ChevronLeftOutlinedIcon from "@mui/icons-material/ChevronLeftOutlined";
+import StarHalfOutlinedIcon from '@mui/icons-material/StarHalfOutlined';
+import StarOutlineOutlinedIcon from '@mui/icons-material/StarOutlineOutlined';
+import IosShareOutlinedIcon from '@mui/icons-material/IosShareOutlined';
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
+
 
 export function loader({ params }) {
   return getVans(params.id);
@@ -51,6 +57,10 @@ export default function VanDetail() {
             <h4 className="van-name">{caravans.name}</h4>
             <span className="type-badge">{caravans.type}</span>
           </div>
+          <br />
+          <span className="van-rating"><StarOutlineOutlinedIcon />{caravans.rating}</span>
+          <br />
+          <div className="share-and-save-btns"><Link className="share-btn"><ShareOutlinedIcon fontSize="small" />  Share</Link><Link className="save-btn"><FavoriteBorderOutlinedIcon fontSize="small" />  Save</Link></div>
           <div className="van-description-container">
             <h3 className="van-description-title">Description</h3>
             <p className="van-description">{caravans.description}</p>
